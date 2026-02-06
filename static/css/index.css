@@ -1,5 +1,94 @@
 body {
   font-family: 'Noto Sans', sans-serif;
+  background: black;
+}
+
+section.section,
+footer.footer {
+  background: black !important;
+  color: white;
+}
+
+section.section .title,
+section.section .content,
+section.section .content p,
+section.section .content a,
+section.section .content strong,
+section.section .publication-authors,
+section.section .publication-authors a,
+section.section .publication-venue,
+footer.footer,
+footer.footer a {
+  color: white !important;
+}
+
+section.section .content a:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+footer.footer .icon-link {
+  color: white !important;
+}
+
+/* Hero section with video background */
+.hero-with-video-bg {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background: black;
+}
+
+.hero-with-video-bg .hero-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%) scale(1);
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-with-video-bg .hero-video-overlay {
+  display: none;
+}
+
+.hero-with-video-bg .hero-body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8vh;
+}
+
+.hero-with-video-bg .publication-title,
+.hero-with-video-bg .publication-authors {
+  color: white;
+}
+
+.hero-with-video-bg .publication-title + .publication-authors {
+  margin-top: 20rem;
+}
+
+.hero-with-video-bg .publication-links {
+  margin-top: 0rem;
+}
+
+.hero-with-video-bg .publication-footnote {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0.5rem;
+}
+
+.hero-with-video-bg .publication-authors a {
+  color: white !important;
+}
+
+.hero-with-video-bg .publication-authors a:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
 
@@ -51,12 +140,23 @@ body {
     font-family: 'Google Sans', sans-serif;
 }
 
+.hero-with-video-bg .publication-title-main {
+  font-size: 7rem;
+  display: block;
+}
+
+.hero-with-video-bg .publication-title-sub {
+  font-size: 4rem;
+  font-weight: 400;
+  display: block;
+}
+
 .publication-authors {
     font-family: 'Google Sans', sans-serif;
 }
 
 .publication-venue {
-    color: #555;
+    color: #aaa;
     width: fit-content;
     font-weight: bold;
 }
@@ -99,12 +199,45 @@ body {
     border-radius: 10px !important;
 }
 
-.publication-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.section-main-title {
+  margin-bottom: 2rem;
+}
+
+.section-videos-wide {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container-videos-wide {
+  max-width: 1400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-videos-wide .publication-video {
+  padding-bottom: 60%;
+}
+
+.section-videos-wide .columns + .columns {
+  margin-top: 2rem;
+}
+
+.publication-video-frameless {
+    border-radius: 0 !important;
+    border: none;
+    box-shadow: none;
+}
+
+.publication-video iframe,
+.publication-video video,
+.publication-video img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .publication-body img {
@@ -117,7 +250,7 @@ body {
 .results-carousel .item {
   margin: 5px;
   overflow: hidden;
-  border: 1px solid #bbb;
+  border: 1px solid #444;
   border-radius: 10px;
   padding: 0;
   font-size: 0;
@@ -129,7 +262,7 @@ body {
 
 
 .interpolation-panel {
-  background: #f5f5f5;
+  background: #1a1a1a;
   border-radius: 10px;
 }
 
