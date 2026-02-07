@@ -199,12 +199,14 @@ footer.footer .icon-link {
     border-radius: 10px !important;
 }
 
-.publication-video iframe {
+.publication-video iframe,
+.publication-video video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
 
 .publication-body img {
@@ -254,4 +256,27 @@ footer.footer .icon-link {
 }
 #interpolation-image-wrapper img {
   border-radius: 5px;
+}
+
+/* Hero section: scale down on mobile only, unchanged on PC. No transform to avoid affecting videos. */
+@media screen and (max-width: 768px) {
+  .hero-with-video-bg .hero-body {
+    padding-top: 4vh;
+  }
+
+  .hero-with-video-bg .publication-title-main {
+    font-size: 3rem;
+  }
+
+  .hero-with-video-bg .publication-title-sub {
+    font-size: 1.75rem;
+  }
+
+  .hero-with-video-bg .publication-title + .publication-authors {
+    margin-top: 2rem;
+  }
+
+  .hero-with-video-bg .publication-authors {
+    font-size: 0.9rem;
+  }
 }
